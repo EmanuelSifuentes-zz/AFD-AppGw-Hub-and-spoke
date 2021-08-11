@@ -156,7 +156,7 @@ resource afwPolicy_Avd_PolicyRules 'Microsoft.Network/firewallPolicies/ruleColle
           {
             ruleType: 'NetworkRule'
             name: 'allow-KMS-activation'
-            description: 'This rule allows KMS activation by enabling TCP port 1688 for kms.${environment().suffixes.storage}'
+            description: 'This rule allows KMS activation by enabling TCP port 1688 for kms.core.windows.net'
             ipProtocols: [
               'TCP'
             ]
@@ -223,7 +223,7 @@ resource afwPolicy_Avd_PolicyRules 'Microsoft.Network/firewallPolicies/ruleColle
               '10.0.0.0/8'
             ]
             targetFqdns: [
-              '*xt.blob.${environment().suffixes.storage}'
+              '*xt.blob.core.windows.net'
               '*eh.servicebus.windows.net'
             ]
             protocols: [
