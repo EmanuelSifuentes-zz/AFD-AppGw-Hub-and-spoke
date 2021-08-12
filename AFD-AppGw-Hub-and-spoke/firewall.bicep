@@ -56,7 +56,7 @@ resource afwPublicIp 'Microsoft.Network/publicIpAddresses@2020-07-01' = {
   }
 }
 
-resource afwPolicy 'Microsoft.Network/firewallPolicies@2020-07-01' = {
+resource afwPolicy 'Microsoft.Network/firewallPolicies@2021-02-01' = {
   name: afwPolicyName
   location: location
   identity: {
