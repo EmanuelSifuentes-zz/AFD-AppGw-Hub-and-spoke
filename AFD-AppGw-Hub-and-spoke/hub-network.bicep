@@ -55,6 +55,20 @@ resource hubVnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
           networkSecurityGroup: {
             id: apimNsg.id
           }
+          serviceEndpoints: [
+            {
+              service: 'Microsoft.Sql'
+            }
+            {
+              service: 'Microsoft.Storage'
+            }
+            {
+              service: 'Microsoft.KeyVault'
+            }
+            {
+              service: 'Microsoft.EventHub'
+            }
+          ]
         }
       }
       {
