@@ -58,7 +58,7 @@ module keyVault 'key-vault.bicep' = {
   params : {
     kvUniqueId: kvUniqueId
     afwManagedIdentityName: firewall.outputs.afwManagedIdentityName
-    afwManagedIdentityRgId: firewall.outputs.afwManagedIdentityRgName
+    afwManagedIdentityRgName: firewall.outputs.afwManagedIdentityRgName
   }
 }
 

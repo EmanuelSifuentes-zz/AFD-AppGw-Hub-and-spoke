@@ -33,7 +33,7 @@ param workspaceId string
 
 var afwName = 'afw-hub-prod-eu2-01'
 var afwPublicIpName = 'pip-afw-prod-eu2-01'
-var afwPolicyName = 'afwp-afw-prod-eu2-01'
+var afwPolicyName = 'pol-afw-prod-eu2-01'
 var afwManagedIdentityName = 'id-afw-prod-eu2-01'
 var afwDefaultRuleCollectionGroupName = 'internal-traffic-rcg'
 var afwAvdRuleCollectionGroupName = 'avd-traffic-rcg'

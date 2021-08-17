@@ -5,7 +5,7 @@ param location string = resourceGroup().location
 param afwManagedIdentityName string
 
 @description('Name of the resource group where the managed identity of the Azure Firewall was deployed')
-param afwManagedIdentityRgId string
+param afwManagedIdentityRgName string
 
 @description('Unique identifier to be prepended to the key vault name')
 @minLength(3)
@@ -15,7 +15,7 @@ param kvUniqueId string
 var keyVaultName = '${kvUniqueId}-kv-hub-prod-eu2-01'
 
 resource afwManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' existing = {
-  scope: resourceGroup(afwManagedIdentityRgId)
+  scope: resourceGroup(afwManagedIdentityRgName)
   name: afwManagedIdentityName
 }
 

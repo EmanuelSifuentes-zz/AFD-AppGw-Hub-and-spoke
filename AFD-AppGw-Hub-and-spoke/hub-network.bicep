@@ -10,7 +10,7 @@ param gwSnetIpPrefix string = '10.0.200.0/24'
 @description('The IP address prefix (CIDR range) to use when deploying the Azure Firewall subnet within the virtual network.')
 param afwSnetIpPrefix string = '10.0.201.0/24'
 
-@description('The IP address prefix (CIDR range) to use when deploying the Azure Firewall subnet within the virtual network.')
+@description('The IP address prefix (CIDR range) to use when deploying the Azure Bastion subnet within the virtual network.')
 param bastionSnetIpPrefix string = '10.0.202.0/24'
 
 @description('The IP address prefix (CIDR range) to use when deploying the Application Gateway subnet within the virtual network.')

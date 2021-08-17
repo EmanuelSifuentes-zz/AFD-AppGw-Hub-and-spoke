@@ -4,13 +4,13 @@ param location string = resourceGroup().location
 @description('The operating environment of the spoke resources.')
 param spokeEnvironment string
 
-@description('The IP address prefix (CIDR range) to use when deploying the virtual network.')
+@description('The IP address prefix (CIDR range) to used when deploying the virtual network.')
 param spokeIpPrefix string
 
-@description('The IP address prefix (CIDR range) to use when deploying the virtual network.')
+@description('The name of the Spoke to be used when deploying the virtual network.')
 param spokeName string
 
-@description('The private IP address prefix of the Azure Firewall internal load balancer')
+@description('The private IP address of the Azure Firewall internal load balancer')
 param afwPrivateIp string
 
 @description('test')
