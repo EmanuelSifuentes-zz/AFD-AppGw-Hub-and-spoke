@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 @description('The name of the resource group to host the hub resources')
-param hubRgName string = 'rg-hub-prod'
+param hubRgName string = 'rg-hub-prod-01'
 
 @description('The location of the resource group to host the hub resources')
 param hubRgLocation string = 'eastus2'
