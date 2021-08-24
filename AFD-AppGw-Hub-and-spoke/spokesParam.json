@@ -1,23 +1,23 @@
 [
     {
-        "name": "app1",
-        "rgName": "rg-app1-prod-01",
-        "rgLocation": "westus",
+        "name": "webapp1",
+        "rgName": "rg-spoke1-prod-01",
+        "rgLocation": "eastus",
         "ipPrefix": "10.1.0.0/16",
         "environment": "prod"
     },
     {
-        "name": "app2",
-        "rgName": "rg-app2-dev-01",
-        "rgLocation": "centralus",
+        "name": "pe",
+        "rgName": "rg-pe-prod-01",
+        "rgLocation": "eastus",
         "ipPrefix": "10.2.0.0/16",
-        "environment": "dev"
+        "environment": "prod"
     },
     {
-        "name": "app3",
-        "rgName": "rg-app3-qa-01",
-        "rgLocation": "westeurope",
+        "name": "webapp1-dev",
+        "rgName": "rg-webapp1-dev-01",
+        "rgLocation": "eastus",
         "ipPrefix": "10.3.0.0/16",
-        "environment": "qa"
+        "environment": "dev"
     }
 ]

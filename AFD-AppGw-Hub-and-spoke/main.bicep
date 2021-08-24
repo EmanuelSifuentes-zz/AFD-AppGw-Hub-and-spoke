@@ -4,7 +4,7 @@ targetScope = 'subscription'
 param hubRgName string = 'rg-hub-prod-01'
 
 @description('The location of the resource group to host the hub resources')
-param hubRgLocation string = 'eastus2'
+param hubRgLocation string = 'eastus'
 
 @description('The name of the application that you will be exposing')
 param appName string 
