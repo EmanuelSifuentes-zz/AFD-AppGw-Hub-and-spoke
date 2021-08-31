@@ -188,6 +188,42 @@ resource afwPolicy_Avd_PolicyRules 'Microsoft.Network/firewallPolicies/ruleColle
               '53'
             ]
           }
+          {
+            ruleType: 'NetworkRule'
+            name: 'allow-AAD'
+            description: 'This rule allows AAD traffic by allowing TCP 80 and 443'
+            ipProtocols: [
+              'TCP'
+            ]
+            sourceAddresses: [
+              '10.0.0.0/8'
+            ]
+            destinationAddresses: [
+              'AzureActiveDirectory'
+            ]
+            destinationPorts: [
+              '80'
+              '443'
+            ]
+          }
+          {
+            ruleType: 'NetworkRule'
+            name: 'allow-AzReqs'
+            description: 'This rule allows traffic to the Azure DNS Recurisve resolver and IDMS endpoint'
+            ipProtocols: [
+              'Any'
+            ]
+            sourceAddresses: [
+              '10.0.0.0/8'
+            ]
+            destinationAddresses: [
+              '169.254.169.254'
+              '168.63.129.16'
+            ]
+            destinationPorts: [
+              '*'
+            ]
+          }
         ]
       }
       {
@@ -207,6 +243,9 @@ resource afwPolicy_Avd_PolicyRules 'Microsoft.Network/firewallPolicies/ruleColle
             ]
             fqdnTags: [
               'WindowsVirtualDesktop'
+              'WindowsUpdate'
+              'WindowsDiagnostics'
+              'MicrosoftActiveProtectionService'
             ]
             protocols: [
               {
