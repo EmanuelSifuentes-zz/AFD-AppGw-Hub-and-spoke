@@ -13,7 +13,7 @@ param spokeName string
 @description('The private IP address of the Azure Firewall internal load balancer')
 param afwPrivateIp string
 
-@description('test')
+@description('The properties for the spoke subnets to be deployed within the VNET. They include NSGs and Route Tables as part of deployment')
 param spokeSubnetProperties array = [
   {
     name: 'snet-front-${spokeEnvironment}-${location}-01'
